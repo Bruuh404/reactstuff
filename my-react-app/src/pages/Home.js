@@ -31,7 +31,20 @@ const Home = () => {
                             </p>
                             </Item>
                         </Grid>
-                        <Grid item xs={6}>
+                        <Grid item size={6}>
+                        <Item>
+                        <h1>Information Box</h1>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor. 
+                                Morbi vel arcu. Vestibulum rutrum rutrum neque. Aenean auctor gravida sem. 
+                                Praesent et diam eget libero egestas mattis. Sed convallis augue vitae lorem.
+                                Nullam euismod convallis est. Quisque aliquam. Donec faucibus. Nunc iaculis suscipit dui. Nam sit amet sem. 
+                                Aliquam libero nisi, imperdiet at, tincidunt nec, gravida vehicula, nisl. Praesent mattis, massa quis luctus fermentum, turpis mi volutpat justo, eu volutpat enim diam eget metus. 
+                                Maecenas ornare tortor. Donec sed tellus eget sapien fringilla nonummy. Mauris a ante. Suspendisse quam sem, consequat at, commodo vitae, feugiat in, nunc. Morbi imperdiet augue quis tellus. 
+                                Etiam feugiat lorem non metus. Vestibulum dapibus nunc ac augue.
+                            </p>
+                            </Item>
+                            </Grid>
+                            <Grid item size={12}>
                         <Item>
                         <h1>Information Box</h1>
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor. 
