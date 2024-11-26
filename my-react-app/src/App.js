@@ -8,7 +8,7 @@ import Footer from "./components/Footer";
 function App() {
   return (
     <React.StrictMode>
-    <Router>
+    <Router basename="/my-react-app">
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
