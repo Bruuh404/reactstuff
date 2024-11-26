@@ -10,10 +10,9 @@ import Container from '@mui/material/Container';
 import Button from '@mui/material/Button';
 import MenuItem from '@mui/material/MenuItem';
 import { Link } from 'react-router-dom';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 const pages = [
-  { name: 'Home', path: '/Home' },
+  { name: 'Home', path: '/page1' },
   { name: 'Page 2', path: '/page2' },
   { name: 'Page 3', path: '/page3' },
 ];
@@ -37,7 +36,7 @@ function Navbar() {
             variant="h6"
             noWrap
             component="a"
-            href="/reactstuff"
+            href="/page1"
             sx={{
               mr: 2,
               display: { xs: 'none', md: 'flex' },
@@ -92,7 +91,7 @@ function Navbar() {
             variant="h5"
             noWrap
             component="a"
-            href="/reactstuff"
+            href="/page1"
             sx={{
               mr: 2,
               display: { xs: 'flex', md: 'none' },
