@@ -33,7 +33,7 @@ function Navbar() {
       <Container maxWidth="xl">
         <Toolbar disableGutters>
           {/* Mobile menu icon */}
-          <Box sx={{flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
+          <Box id="mbox" sx={{flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
             <IconButton
               size="large"
               aria-label="account of current user"
@@ -70,7 +70,7 @@ function Navbar() {
             </Menu>
           </Box>
           {/* Desktop links */}
-          <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
+          <Box id="dbox" sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
             {pages.map((page) => (
               <Button
                 key={page.path}
