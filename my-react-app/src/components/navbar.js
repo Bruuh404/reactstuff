@@ -33,7 +33,7 @@ function Navbar() {
       <Container maxWidth="xl">
         <Toolbar disableGutters>
           {/* Mobile menu icon */}
-          <Box id="mbox" sx={{flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
+          <Box sx={{flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
             <IconButton
               size="large"
               aria-label="account of current user"
@@ -62,7 +62,9 @@ function Navbar() {
             >
               {pages.map((page) => (
                 <MenuItem key={page.path} onClick={handleCloseNavMenu}>
-                  <Link to={page.path} style={{ textDecoration: 'none', color: 'inherit' }}>
+                  <Link to={page.path} style={{ textDecoration: 'none', 
+                  color: 'inherit', 
+                  }}>
                     <Typography textAlign="center">{page.name}</Typography>
                   </Link>
                 </MenuItem>
@@ -76,7 +78,12 @@ function Navbar() {
                 key={page.path}
                 component={Link}
                 to={page.path}
-                sx={{ my: 2, color: 'white', display: 'block' }}
+                sx={{ my: 2, color: 'white', display: 'block',
+                  display: { xs: 'none', md: 'flex' },
+                  justifyContent: 'center',
+                  flexGrow: 1,
+                }}
+
               >
                 {page.name}
               </Button>
