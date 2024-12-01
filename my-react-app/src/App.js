@@ -8,7 +8,7 @@ import Footer from "./components/Footer";
 function App() {
   return (
     <React.StrictMode>
-    <Router basename="/Gymnasiearbete">
+    <Router basename="/reactstuff">
     <Navbar />
       <Routes>
         <Route path="/page1" element={<Home />} />
@@ -16,7 +16,7 @@ function App() {
         <Route path="/page3" element={<Page3 />} />
       </Routes>
     </Router>
-    <Home />
+    <Home/>
     <Footer />
   </React.StrictMode>
   );

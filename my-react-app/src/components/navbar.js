@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React from 'react';
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
@@ -9,7 +9,7 @@ import MenuIcon from '@mui/icons-material/Menu';
 import Container from '@mui/material/Container';
 import Button from '@mui/material/Button';
 import MenuItem from '@mui/material/MenuItem';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 
 const pages = [
   { name: 'Home', path: '/page1' },
@@ -18,25 +18,33 @@ const pages = [
 ];
 
 function Navbar() {
-    const [anchorElNav, setAnchorElNav] = React.useState(null);
+  const [anchorElNav, setAnchorElNav] = React.useState(null);
+  const currentLocation = useLocation();
 
-    const handleOpenNavMenu = (event) => {
-        setAnchorElNav(event.currentTarget);
-    };
+  const handleOpenNavMenu = (event) => {
+    setAnchorElNav(event.currentTarget);
+  };
 
-    const handleCloseNavMenu = () => {
-        setAnchorElNav(null);
-    };
+  const handleCloseNavMenu = () => {
+    setAnchorElNav(null);
+  };
+
+  const currentPage = pages.find((page) => page.path === currentLocation.pathname);
 
   return (
     <AppBar position="static">
       <Container maxWidth="xl">
-        <Toolbar disableGutters>
+        <Toolbar
+          disableGutters
+          sx={{
+            position: 'relative', // Necessary for absolute positioning
+          }}
+        >
           {/* Mobile menu icon */}
-          <Box sx={{flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
+          <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
             <IconButton
               size="large"
-              aria-label="account of current user"
+              aria-label="menu"
               aria-controls="menu-appbar"
               aria-haspopup="true"
               onClick={handleOpenNavMenu}
@@ -62,28 +70,45 @@ function Navbar() {
             >
               {pages.map((page) => (
                 <MenuItem key={page.path} onClick={handleCloseNavMenu}>
-                  <Link to={page.path} style={{ textDecoration: 'none', 
-                  color: 'inherit', 
-                  }}>
+                  <Link
+                    to={page.path}
+                    style={{ textDecoration: 'none', color: 'inherit' }}
+                  >
                     <Typography textAlign="center">{page.name}</Typography>
                   </Link>
                 </MenuItem>
               ))}
             </Menu>
           </Box>
+
+          {/* Center the current page name in mobile view */}
+          <Typography
+            variant="h6"
+            component="div"
+            textAlign="center"
+            sx={{
+              position: 'absolute', // Center text
+              top: '50%',
+              left: '50%',
+              transform: 'translate(-50%, -50%)',
+              display: { xs: 'block', md: 'none' },
+            }}
+          >
+            {currentPage?.name || 'Navbar'}
+          </Typography>
+
           {/* Desktop links */}
-          <Box id="dbox" sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
+          <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
             {pages.map((page) => (
               <Button
                 key={page.path}
                 component={Link}
                 to={page.path}
-                sx={{ my: 2, color: 'white', display: 'block',
-                  display: { xs: 'none', md: 'flex' },
-                  justifyContent: 'center',
-                  flexGrow: 1,
+                sx={{
+                  my: 2,
+                  color: 'white',
+                  display: 'block',
                 }}
-
               >
                 {page.name}
               </Button>
@@ -92,7 +117,6 @@ function Navbar() {
         </Toolbar>
       </Container>
     </AppBar>
-
   );
 }
 
