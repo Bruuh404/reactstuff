@@ -11,12 +11,12 @@ function App() {
     <Router basename="/reactstuff">
     <Navbar />
       <Routes>
-        <Route path="/" element={<Page2 />} />
-        <Route path="/page2" element={<Home />} />
+        <Route path="/" element={<Home />} />
+        <Route path="/page2" element={<Page2 />} />
         <Route path="/page3" element={<Page3 />} />
       </Routes>
     </Router>
-    <Page2/>
+    <Home/>
     <Footer />
   </React.StrictMode>
   );
