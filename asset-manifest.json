@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/gymnasiearbete/static/css/main.7f8733f8.css",
-    "main.js": "/gymnasiearbete/static/js/main.fb9a3412.js",
+    "main.js": "/gymnasiearbete/static/js/main.5b47d184.js",
     "static/js/453.ad6eb26e.chunk.js": "/gymnasiearbete/static/js/453.ad6eb26e.chunk.js",
     "index.html": "/gymnasiearbete/index.html",
     "main.7f8733f8.css.map": "/gymnasiearbete/static/css/main.7f8733f8.css.map",
-    "main.fb9a3412.js.map": "/gymnasiearbete/static/js/main.fb9a3412.js.map",
+    "main.5b47d184.js.map": "/gymnasiearbete/static/js/main.5b47d184.js.map",
     "453.ad6eb26e.chunk.js.map": "/gymnasiearbete/static/js/453.ad6eb26e.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.7f8733f8.css",
-    "static/js/main.fb9a3412.js"
+    "static/js/main.5b47d184.js"
   ]
 }
