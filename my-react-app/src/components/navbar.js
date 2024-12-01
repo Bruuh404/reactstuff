@@ -37,7 +37,7 @@ function Navbar() {
         <Toolbar
           disableGutters
           sx={{
-            position: 'relative', // Necessary for absolute positioning
+            position: 'relative', // Allows positioning of center text
           }}
         >
           {/* Mobile menu icon */}
@@ -81,24 +81,30 @@ function Navbar() {
             </Menu>
           </Box>
 
-          {/* Center the current page name in mobile view */}
+          {/* Centered text for both mobile and desktop */}
           <Typography
             variant="h6"
             component="div"
             textAlign="center"
             sx={{
-              position: 'absolute', // Center text
+              position: 'absolute', // Center text for both views
               top: '50%',
               left: '50%',
               transform: 'translate(-50%, -50%)',
-              display: { xs: 'block', md: 'none' },
+              flexGrow: 1,
             }}
           >
             {currentPage?.name || 'Home'}
           </Typography>
 
           {/* Desktop links */}
-          <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
+          <Box
+            sx={{
+              flexGrow: 1,
+              display: { xs: 'none', md: 'flex' },
+              justifyContent: 'flex-end', // Align links to the right
+            }}
+          >
             {pages.map((page) => (
               <Button
                 key={page.path}
