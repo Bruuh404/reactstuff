@@ -79,10 +79,7 @@ function Navbar() {
                 </MenuItem>
               ))}
             </Menu>
-          </Box>
-
-          {/* Centered text for both mobile and desktop */}
-          <Typography
+            <Typography
             variant="h6"
             component="div"
             textAlign="center"
@@ -96,13 +93,16 @@ function Navbar() {
           >
             {currentPage?.name || 'Home'}
           </Typography>
+          </Box>
+
+          {/* Centered text for both mobile and desktop */}
 
           {/* Desktop links */}
           <Box
             sx={{
               flexGrow: 1,
               display: { xs: 'none', md: 'flex' },
-              justifyContent: 'flex-end', // Align links to the right
+              justifyContent: 'space-around', // Align links to the right
             }}
           >
             {pages.map((page) => (
