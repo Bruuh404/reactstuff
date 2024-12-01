@@ -16,7 +16,7 @@ function App() {
         <Route path="/page3" element={<Page3 />} />
       </Routes>
     </Router>
-    <Home/>
+    <Page2/>
     <Footer />
   </React.StrictMode>
   );
