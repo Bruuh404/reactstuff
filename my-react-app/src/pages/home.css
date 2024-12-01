@@ -16,9 +16,11 @@ code {
 #container {
   max-height: 1000vh;
     margin: 10px;
+    border: solid green 5px;
 }
 #maxsize {
   height: 100%;
+  border: solid black 5px;
 }
 
 #more {
@@ -26,5 +28,6 @@ code {
 }
 
 #grid1 {
+  border: solid red 5px;
   height: 100%;
 }
