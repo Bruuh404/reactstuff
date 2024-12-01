@@ -94,7 +94,7 @@ function Navbar() {
               display: { xs: 'block', md: 'none' },
             }}
           >
-            {currentPage?.name || 'Navbar'}
+            {currentPage?.name || 'Home'}
           </Typography>
 
           {/* Desktop links */}
