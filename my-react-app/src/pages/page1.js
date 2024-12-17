@@ -1,7 +1,6 @@
 import * as React from 'react';
 import Box from '@mui/material/Box';
 import Grid from '@mui/material/Grid2';
-import "./home.css"
 import Bild1 from "./Bild1.jpeg";
 
 import Paper from '@mui/material/Paper';
@@ -17,7 +16,7 @@ const Item = styled(Paper)(({ theme }) => ({
 const Home = () => {
     return (
         <Box sx={{m: 2, flexGrow: 1 }}>
-            <Grid id="container" container spacing={2}>
+            <Grid sx={{m: 2}} container spacing={2}>
                 <Grid size={
                     {xs: 12, md: 6}
                     }>
@@ -58,7 +57,7 @@ const Home = () => {
                             </Grid>
                     </Grid>
                 </Grid>
-                <Grid id="maxsize" size={{xs: 12, md: 6}}>
+                <Grid size={{xs: 12, md: 6}}>
                     <Item>
                         <h1>Information Box</h1>
                         <img src={Bild1} alt="The Official Olympics Logo"></img>
