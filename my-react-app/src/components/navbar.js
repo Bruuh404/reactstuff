@@ -102,7 +102,7 @@ function Navbar() {
             sx={{
               flexGrow: 1,
               display: { xs: 'none', md: 'flex' },
-              justifyContent: 'space-around', // Align links to the right
+              justifyContent: 'space-around',
             }}
           >
             {pages.map((page) => (
